@@ -1,0 +1,109 @@
+package com.graskaas.sfw;
+
+import com.graskaas.sfw.util.SlabUtils;
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Material;
+import net.minecraft.block.SlabBlock;
+
+public class SlabsFromWood implements ModInitializer {
+
+    private static final String MOD_ID = "sfw";
+    private static final float HARDNESS = 2.0f;
+    private static final float RESISTANCE = 3.0f;
+
+    // normal logs
+    public static final SlabBlock OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock DARK_OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock SPRUCE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock BIRCH_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock ACACIA_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock JUNGLE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock CRIMSON_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock WARPED_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+
+    // stripped logs
+    public static final SlabBlock STRIPPED_OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_DARK_OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_SPRUCE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_BIRCH_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_ACACIA_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_JUNGLE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_CRIMSON_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_WARPED_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+
+    // normal woods
+    public static final SlabBlock OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock DARK_OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock SPRUCE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock BIRCH_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock ACACIA_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock JUNGLE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock CRIMSON_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock WARPED_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+
+    // stripped woods
+    public static final SlabBlock STRIPPED_OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_DARK_OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_SPRUCE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_BIRCH_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_ACACIA_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_JUNGLE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_CRIMSON_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_WARPED_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+
+    @Override
+    public void onInitialize() {
+        registerVanillaSlabs();
+    }
+
+    private void registerVanillaSlabs() {
+        // oak
+        SlabUtils.registerSlab("oak_log_slab", OAK_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_oak_log_slab", STRIPPED_OAK_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("oak_wood_slab", OAK_WOOD_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_oak_wood_slab", STRIPPED_OAK_WOOD_SLAB, MOD_ID);
+
+        // dark oak
+        SlabUtils.registerSlab("dark_oak_log_slab", DARK_OAK_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_dark_oak_log_slab", STRIPPED_DARK_OAK_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("dark_oak_wood_slab", DARK_OAK_WOOD_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_dark_oak_wood_slab", STRIPPED_DARK_OAK_WOOD_SLAB, MOD_ID);
+
+        // spruce
+        SlabUtils.registerSlab("spruce_log_slab", SPRUCE_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_spruce_log_slab", STRIPPED_SPRUCE_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("spruce_wood_slab", SPRUCE_WOOD_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_spruce_wood_slab", STRIPPED_SPRUCE_WOOD_SLAB, MOD_ID);
+
+        // birch
+        SlabUtils.registerSlab("birch_log_slab", BIRCH_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_birch_log_slab", STRIPPED_BIRCH_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("birch_wood_slab", BIRCH_WOOD_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_birch_wood_slab", STRIPPED_BIRCH_WOOD_SLAB, MOD_ID);
+
+        // acacia
+        SlabUtils.registerSlab("acacia_log_slab", ACACIA_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_acacia_log_slab", STRIPPED_ACACIA_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("acacia_wood_slab", ACACIA_WOOD_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_acacia_wood_slab", STRIPPED_ACACIA_WOOD_SLAB, MOD_ID);
+
+        // jungle
+        SlabUtils.registerSlab("jungle_log_slab", JUNGLE_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_jungle_log_slab", STRIPPED_JUNGLE_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("jungle_wood_slab", JUNGLE_WOOD_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_jungle_wood_slab", STRIPPED_JUNGLE_WOOD_SLAB, MOD_ID);
+
+        // crimson
+        SlabUtils.registerSlab("crimson_stem_slab", CRIMSON_STEM_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_crimson_stem_slab", STRIPPED_CRIMSON_STEM_SLAB, MOD_ID);
+        SlabUtils.registerSlab("crimson_hyphae_slab", CRIMSON_HYPHAE_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_crimson_hyphae_slab", STRIPPED_CRIMSON_HYPHAE_SLAB, MOD_ID);
+
+        // warped
+        SlabUtils.registerSlab("warped_stem_slab", WARPED_STEM_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_warped_stem_slab", STRIPPED_WARPED_STEM_SLAB, MOD_ID);
+        SlabUtils.registerSlab("warped_hyphae_slab", WARPED_HYPHAE_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_warped_hyphae_slab", STRIPPED_WARPED_HYPHAE_SLAB, MOD_ID);
+    }
+}

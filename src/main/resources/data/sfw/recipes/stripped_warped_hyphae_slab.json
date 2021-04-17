@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stripped_warped_hyphae"
+    }
+  },
+  "result": {
+    "item": "sfw:stripped_warped_hyphae_slab",
+    "count": 6
+  }
+}
