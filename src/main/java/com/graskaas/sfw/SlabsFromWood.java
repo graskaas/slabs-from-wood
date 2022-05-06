@@ -9,8 +9,27 @@ import net.minecraft.block.SlabBlock;
 public class SlabsFromWood implements ModInitializer {
 
     private static final String MOD_ID = "sfw";
-    private static final float HARDNESS = 2.0f;
-    private static final float RESISTANCE = 3.0f;
+    /* NOTE: The following is a hack.
+
+       This is an excerpt from the Fabric Wiki regarding blocks:
+
+       =============
+
+       `strength` sets both the hardness and the resistance of a block to the same value.
+       Hardness determines how long the block takes to break, and resistance determines how strong the block is against blast damage (e.g. explosions).
+       Stone has a hardness of 1.5f and a resistance of 6.0f, while Obsidian has a hardness of 50.0f and a resistance of 1200.0f.
+
+       You can find the stats of all vanilla blocks in the class `Blocks`, where you can also reference other blocks.
+
+       =============
+
+       In the Blocks class, OAK_SLAB has a hardness of 2.0F and resistance of 3.0F which is why I use these values.
+       In the game, these modded blocks take almost as much time to break as Obsidian.
+
+       Moving the decimal seems to have worked for me as of 1.18.2 so this will stay for now, and is considered a hack.
+     */
+    private static final float HARDNESS = 2.0f / 10f;
+    private static final float RESISTANCE = 3.0f / 10f;
 
     // normal logs
     public static final SlabBlock OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
