@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Material;
 import net.minecraft.block.SlabBlock;
+import net.minecraft.sound.BlockSoundGroup;
 
 public class SlabsFromWood implements ModInitializer {
 
@@ -32,44 +33,44 @@ public class SlabsFromWood implements ModInitializer {
     private static final float RESISTANCE = 3.0f / 10f;
 
     // normal logs
-    public static final SlabBlock OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock DARK_OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock SPRUCE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock BIRCH_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock ACACIA_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock JUNGLE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock CRIMSON_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock WARPED_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock DARK_OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock SPRUCE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock BIRCH_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock ACACIA_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock JUNGLE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock CRIMSON_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
+    public static final SlabBlock WARPED_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
 
     // stripped logs
-    public static final SlabBlock STRIPPED_OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_DARK_OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_SPRUCE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_BIRCH_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_ACACIA_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_JUNGLE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_CRIMSON_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_WARPED_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_DARK_OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_SPRUCE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_BIRCH_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_ACACIA_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_JUNGLE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_CRIMSON_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
+    public static final SlabBlock STRIPPED_WARPED_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
 
     // normal woods
-    public static final SlabBlock OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock DARK_OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock SPRUCE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock BIRCH_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock ACACIA_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock JUNGLE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock CRIMSON_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock WARPED_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock DARK_OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock SPRUCE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock BIRCH_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock ACACIA_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock JUNGLE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock CRIMSON_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
+    public static final SlabBlock WARPED_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
 
     // stripped woods
-    public static final SlabBlock STRIPPED_OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_DARK_OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_SPRUCE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_BIRCH_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_ACACIA_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_JUNGLE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_CRIMSON_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
-    public static final SlabBlock STRIPPED_WARPED_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE));
+    public static final SlabBlock STRIPPED_OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_DARK_OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_SPRUCE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_BIRCH_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_ACACIA_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_JUNGLE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
+    public static final SlabBlock STRIPPED_CRIMSON_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
+    public static final SlabBlock STRIPPED_WARPED_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
 
     @Override
     public void onInitialize() {
