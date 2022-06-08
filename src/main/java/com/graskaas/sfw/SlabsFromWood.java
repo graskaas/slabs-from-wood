@@ -41,6 +41,7 @@ public class SlabsFromWood implements ModInitializer {
     public static final SlabBlock JUNGLE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
     public static final SlabBlock CRIMSON_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
     public static final SlabBlock WARPED_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
+    public static final SlabBlock MANGROVE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
 
     // stripped logs
     public static final SlabBlock STRIPPED_OAK_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
@@ -51,6 +52,7 @@ public class SlabsFromWood implements ModInitializer {
     public static final SlabBlock STRIPPED_JUNGLE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
     public static final SlabBlock STRIPPED_CRIMSON_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
     public static final SlabBlock STRIPPED_WARPED_STEM_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
+    public static final SlabBlock STRIPPED_MANGROVE_LOG_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
 
     // normal woods
     public static final SlabBlock OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
@@ -61,6 +63,7 @@ public class SlabsFromWood implements ModInitializer {
     public static final SlabBlock JUNGLE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
     public static final SlabBlock CRIMSON_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
     public static final SlabBlock WARPED_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
+    public static final SlabBlock MANGROVE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
 
     // stripped woods
     public static final SlabBlock STRIPPED_OAK_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
@@ -71,6 +74,7 @@ public class SlabsFromWood implements ModInitializer {
     public static final SlabBlock STRIPPED_JUNGLE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
     public static final SlabBlock STRIPPED_CRIMSON_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
     public static final SlabBlock STRIPPED_WARPED_HYPHAE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.NETHER_STEM));
+    public static final SlabBlock STRIPPED_MANGROVE_WOOD_SLAB = new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(HARDNESS, RESISTANCE).sounds(BlockSoundGroup.WOOD));
 
     @Override
     public void onInitialize() {
@@ -125,5 +129,11 @@ public class SlabsFromWood implements ModInitializer {
         SlabUtils.registerSlab("stripped_warped_stem_slab", STRIPPED_WARPED_STEM_SLAB, MOD_ID);
         SlabUtils.registerSlab("warped_hyphae_slab", WARPED_HYPHAE_SLAB, MOD_ID);
         SlabUtils.registerSlab("stripped_warped_hyphae_slab", STRIPPED_WARPED_HYPHAE_SLAB, MOD_ID);
+
+        // mangrove
+        SlabUtils.registerSlab("mangrove_log_slab", MANGROVE_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_mangrove_log_slab", STRIPPED_MANGROVE_LOG_SLAB, MOD_ID);
+        SlabUtils.registerSlab("mangrove_wood_slab", MANGROVE_WOOD_SLAB, MOD_ID);
+        SlabUtils.registerSlab("stripped_mangrove_wood_slab", STRIPPED_MANGROVE_WOOD_SLAB, MOD_ID);
     }
 }
